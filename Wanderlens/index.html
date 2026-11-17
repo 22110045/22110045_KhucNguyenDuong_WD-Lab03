@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="WanderLens — Bộ sưu tập Nhiếp ảnh Kiến trúc & Du lịch" />
+  <title>WanderLens | Bộ sưu tập Nhiếp ảnh &amp; Du lịch</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">◉</span>
+        <span class="brand-text">Wander<strong>Lens</strong></span>
+      </a>
+      <nav class="main-nav" aria-label="Điều hướng chính">
+        <a href="#gallery">Bộ sưu tập</a>
+        <a href="#curated">Chuyên đề</a>
+        <a href="#submit-photo">Gửi tác phẩm</a>
+      </nav>
+      <div class="header-status">
+        <span class="offline-pill"><i class="dot" aria-hidden="true"></i>Offline Archive</span>
+        <a class="btn btn-primary btn-sm" href="#submit-photo">+ Đăng ảnh</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- SPLIT EDITORIAL HERO -->
+    <section class="hero" aria-label="Giới thiệu WanderLens">
+      <div class="hero-content">
+        <span class="eyebrow">PORTFOLIO NHIẾP ẢNH &amp; DU LỊCH</span>
+        <h1>Ghi lại nhịp thở của kiến trúc và những cung đường.</h1>
+        <p>
+          Không gian lưu trữ các khung hình chọn lọc theo chủ đề kiến trúc, đường phố, di sản và biển đảo.
+          Nhấn vào từng tác phẩm để xem thông số ống kính và tải bản gốc SVG.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#gallery">Khám phá 08 tác phẩm</a>
+          <a class="btn btn-ghost" href="#curated">Xem theo chuyên đề</a>
+        </div>
+      </div>
+
+      <div class="hero-stats" aria-label="Thống kê bộ sưu tập">
+        <div class="stat-box">
+          <strong>08</strong>
+          <span>Tác phẩm chọn lọc</span>
+        </div>
+        <div class="stat-box">
+          <strong>04</strong>
+          <span>Chuyên đề nhiếp ảnh</span>
+        </div>
+        <div class="stat-box">
+          <strong>03</strong>
+          <span>Vùng miền ghi hình</span>
+        </div>
+        <div class="stat-box stat-highlight">
+          <strong>SVG</strong>
+          <span>Định dạng vector sắc nét</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY & CSS-ONLY RADIO FILTER -->
+    <section id="gallery" class="section-block">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">THƯ VIỆN TÁC PHẨM</span>
+          <h2>Khung hình chọn lọc</h2>
+        </div>
+        <p class="section-note">Chọn chủ đề để lọc nhanh hoặc nhấn vào ảnh để mở bảng thông số chi tiết.</p>
+      </div>
+
+      <div class="filter-system">
+        <input type="radio" name="lens-filter" id="f-all" class="filter-radio" checked />
+        <input type="radio" name="lens-filter" id="f-arch" class="filter-radio" />
+        <input type="radio" name="lens-filter" id="f-street" class="filter-radio" />
+        <input type="radio" name="lens-filter" id="f-heritage" class="filter-radio" />
+        <input type="radio" name="lens-filter" id="f-coast" class="filter-radio" />
+
+        <div class="filter-tabs" role="group" aria-label="Lọc theo chuyên đề">
+          <label for="f-all">Tất cả (08)</label>
+          <label for="f-arch">Kiến trúc (02)</label>
+          <label for="f-street">Đường phố (02)</label>
+          <label for="f-heritage">Di sản (02)</label>
+          <label for="f-coast">Biển đảo (02)</label>
+        </div>
+
+        <div class="photo-grid">
+          <!-- 01 -->
+          <article class="photo-card cat-arch">
+            <a class="thumb-link" href="#work-1" aria-label="Xem chi tiết Vòm Bê Tông Nắng Sớm">
+              <img src="assets/arch-01.svg" alt="Vòm Bê Tông Nắng Sớm" width="800" height="600" loading="lazy" />
+              <span class="exif-badge">24mm · f/4.0</span>
+            </a>
+            <div class="card-body">
+              <div>
+                <span class="cat-label">Kiến trúc</span>
+                <h3>Vòm Bê Tông Nắng Sớm</h3>
+                <p class="location">Quận 1, TP. Hồ Chí Minh</p>
+              </div>
+              <a class="dl-btn" href="assets/arch-01.svg" download="arch-01.svg" title="Tải ảnh SVG">↓</a>
+            </div>
+          </article>
+
+          <!-- 02 -->
+          <article class="photo-card cat-street">
+            <a class="thumb-link" href="#work-2" aria-label="Xem chi tiết Giao Lộ Chiều Mưa">
+              <img src="assets/street-01.svg" alt="Giao Lộ Chiều Mưa" width="800" height="600" loading="lazy" />
+              <span class="exif-badge">35mm · f/2.0</span>
+            </a>
+            <div class="card-body">
+              <div>
+                <span class="cat-label">Đường phố</span>
+                <h3>Giao Lộ Chiều Mưa</h3>
+                <p class="location">Hoàn Kiếm, Hà Nội</p>
+              </div>
+              <a class="dl-btn" href="assets/street-01.svg" download="street-01.svg" title="Tải ảnh SVG">↓</a>
+            </div>
+          </article>
+
+          <!-- 03 -->
+          <article class="photo-card cat-heritage">
+            <a class="thumb-link" href="#work-3" aria-label="Xem chi tiết Mái Ngói Phố Hội">
+              <img src="assets/heritage-01.svg" alt="Mái Ngói Phố Hội" width="800" height="600" loading="lazy" />
+              <span class="exif-badge">50mm · f/2.8</span>
+            </a>
+            <div class="card-body">
+              <div>
+                <span class="cat-label">Di sản</span>
+                <h3>Mái Ngói Phố Hội</h3>
+                <p class="location">Hội An, Quảng Nam</p>
+              </div>
+              <a class="dl-btn" href="assets/heritage-01.svg" download="heritage-01.svg" title="Tải ảnh SVG">↓</a>
+            </div>
+          </article>
+
+          <!-- 04 -->
+          <article class="photo-card cat-coast">
+            <a class="thumb-link" href="#work-4" aria-label="Xem chi tiết Hải Đăng Mũi Điện">
+              <img src="assets/coast-01.svg" alt="Hải Đăng Mũi Điện" width="800" height="600" loading="lazy" />
+              <span class="exif-badge">16mm · f/8.0</span>
+            </a>
+            <div class="card-body">
+              <div>
+                <span class="cat-label">Biển đảo</span>
+                <h3>Hải Đăng Mũi Điện</h3>
+                <p class="location">Đông Hòa, Phú Yên</p>
+              </div>
+              <a class="dl-btn" href="assets/coast-01.svg" download="coast-01.svg" title="Tải ảnh SVG">↓</a>
+            </div>
+          </article>
+
+          <!-- 05 -->
+          <article class="photo-card cat-arch">
+            <a class="thumb-link" href="#work-5" aria-label="Xem chi tiết Nhịp Cầu Kính Đêm">
+              <img src="assets/arch-02.svg" alt="Nhịp Cầu Kính Đêm" width="800" height="600" loading="lazy" />
+              <span class="exif-badge">28mm · f/5.6</span>
+            </a>
+            <div class="card-body">
+              <div>
+                <span class="cat-label">Kiến trúc</span>
+                <h3>Nhịp Cầu Kính Đêm</h3>
+                <p class="location">Thủ Thiêm, TP. Hồ Chí Minh</p>
+              </div>
+              <a class="dl-btn" href="assets/arch-02.svg" download="arch-02.svg" title="Tải ảnh SVG">↓</a>
+            </div>
+          </article>
+
+          <!-- 06 -->
+          <article class="photo-card cat-street">
+            <a class="thumb-link" href="#work-6" aria-label="Xem chi tiết Góc Cà Phê Sáng">
+              <img src="assets/street-02.svg" alt="Góc Cà Phê Sáng" width="800" height="600" loading="lazy" />
+              <span class="exif-badge">35mm · f/1.8</span>
+            </a>
+            <div class="card-body">
+              <div>
+                <span class="cat-label">Đường phố</span>
+                <h3>Góc Cà Phê Sáng</h3>
+                <p class="location">Đà Lạt, Lâm Đồng</p>
+              </div>
+              <a class="dl-btn" href="assets/street-02.svg" download="street-02.svg" title="Tải ảnh SVG">↓</a>
+            </div>
+          </article>
+
+          <!-- 07 -->
+          <article class="photo-card cat-heritage">
+            <a class="thumb-link" href="#work-7" aria-label="Xem chi tiết Cổng Thành Rêu Phong">
+              <img src="assets/heritage-02.svg" alt="Cổng Thành Rêu Phong" width="800" height="600" loading="lazy" />
+              <span class="exif-badge">50mm · f/4.0</span>
+            </a>
+            <div class="card-body">
+              <div>
+                <span class="cat-label">Di sản</span>
+                <h3>Cổng Thành Rêu Phong</h3>
+                <p class="location">Kinh Thành Huế</p>
+              </div>
+              <a class="dl-btn" href="assets/heritage-02.svg" download="heritage-02.svg" title="Tải ảnh SVG">↓</a>
+            </div>
+          </article>
+
+          <!-- 08 -->
+          <article class="photo-card cat-coast">
+            <a class="thumb-link" href="#work-8" aria-label="Xem chi tiết Bình Minh Ghềnh Đá">
+              <img src="assets/coast-02.svg" alt="Bình Minh Ghềnh Đá" width="800" height="600" loading="lazy" />
+              <span class="exif-badge">24mm · f/11</span>
+            </a>
+            <div class="card-body">
+              <div>
+                <span class="cat-label">Biển đảo</span>
+                <h3>Bình Minh Ghềnh Đá</h3>
+                <p class="location">Lý Sơn, Quảng Ngãi</p>
+              </div>
+              <a class="dl-btn" href="assets/coast-02.svg" download="coast-02.svg" title="Tải ảnh SVG">↓</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CURATED COLLECTIONS -->
+    <section id="curated" class="section-block">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">CHUYÊN ĐỀ LƯU TRỮ</span>
+          <h2>Bốn nhóm chủ đề chính</h2>
+        </div>
+      </div>
+      <div class="curated-grid">
+        <a class="curated-card" href="#gallery">
+          <span class="curated-num">01 · 02 ẢNH</span>
+          <h3>Kiến trúc Đương đại</h3>
+          <p>Hình khối bê tông, ánh sáng tự nhiên và kết cấu không gian đô thị.</p>
+        </a>
+        <a class="curated-card" href="#gallery">
+          <span class="curated-num">02 · 02 ẢNH</span>
+          <h3>Nhịp sống Đường phố</h3>
+          <p>Khoảnh khắc đời thường, quán nhỏ và những ngã tư sau cơn mưa.</p>
+        </a>
+        <a class="curated-card" href="#gallery">
+          <span class="curated-num">03 · 02 ẢNH</span>
+          <h3>Di sản &amp; Ký ức</h3>
+          <p>Mái ngói cổ, tường vàng rêu phong và dấu ấn văn hóa truyền thống.</p>
+        </a>
+        <a class="curated-card" href="#gallery">
+          <span class="curated-num">04 · 02 ẢNH</span>
+          <h3>Đường bờ Biển đảo</h3>
+          <p>Đường chân trời, ngọn hải đăng và bình minh trên những ghềnh đá.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- SUBMIT PHOTO FORM (2 COLUMNS) -->
+    <section id="submit-photo" class="section-block">
+      <div class="submit-layout">
+        <div class="form-panel">
+          <span class="eyebrow">ĐÓNG GÓP TÁC PHẨM</span>
+          <h2>Gửi thông tin ảnh mới</h2>
+          <p class="form-desc">Điền thông tin tác phẩm để ghi nhận vào danh mục đề xuất (biểu mẫu tĩnh GET).</p>
+
+          <form action="form-result.html" method="get" class="editorial-form">
+            <div class="form-row">
+              <div class="field">
+                <label for="w-title">Tên tác phẩm <span class="req">*</span></label>
+                <input id="w-title" name="title" type="text" minlength="3" maxlength="80" placeholder="Ví dụ: Nắng Chiều Cầu Mống" required />
+              </div>
+              <div class="field">
+                <label for="w-location">Địa điểm chụp <span class="req">*</span></label>
+                <input id="w-location" name="location" type="text" placeholder="Ví dụ: Quận 4, TP.HCM" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="w-category">Chuyên đề <span class="req">*</span></label>
+                <select id="w-category" name="category" required>
+                  <option value="">-- Chọn chuyên đề --</option>
+                  <option value="arch">Kiến trúc</option>
+                  <option value="street">Đường phố</option>
+                  <option value="heritage">Di sản</option>
+                  <option value="coast">Biển đảo</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="w-lens">Thông số ống kính</label>
+                <input id="w-lens" name="lens" type="text" placeholder="Ví dụ: 35mm · f/2.8" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="w-date">Ngày chụp <span class="req">*</span></label>
+                <input id="w-date" name="shot_date" type="date" required />
+              </div>
+              <div class="field">
+                <label for="w-file">Tệp ảnh minh họa <span class="req">*</span></label>
+                <input id="w-file" name="photo_file" type="file" accept="image/*" required />
+              </div>
+            </div>
+
+            <fieldset class="radio-group">
+              <legend>Bản quyền hiển thị</legend>
+              <label><input type="radio" name="license" value="portfolio" checked /> Chỉ trưng bày Portfolio</label>
+              <label><input type="radio" name="license" value="cc" /> Cho phép tải về phi thương mại</label>
+            </fieldset>
+
+            <div class="field">
+              <label for="w-story">Ghi chú bối cảnh chụp</label>
+              <textarea id="w-story" name="story" rows="3" placeholder="Mô tả ánh sáng, thời điểm hoặc câu chuyện bức ảnh..."></textarea>
+            </div>
+
+            <div class="form-buttons">
+              <button type="reset" class="btn btn-ghost">Xóa nhập lại</button>
+              <button type="submit" class="btn btn-primary">Gửi thông tin tác phẩm ↗</button>
+            </div>
+          </form>
+        </div>
+
+        <aside class="guide-panel">
+          <span class="eyebrow">QUY CHUẨN LƯU TRỮ</span>
+          <h3>Ghi chú kỹ thuật</h3>
+          <ul>
+            <li><strong>Định dạng ưu tiên:</strong> SVG vector hoặc ảnh tỷ lệ 4:3 độ phân giải cao.</li>
+            <li><strong>Metadata đầy đủ:</strong> Ghi rõ tiêu cự, khẩu độ và địa danh thực tế.</li>
+            <li><strong>Chế độ ngoại tuyến:</strong> Toàn bộ tài nguyên lưu cục bộ tại thư mục <code>assets/</code>.</li>
+            <li><strong>Lưu ý biểu mẫu:</strong> Ứng dụng thuần HTML/CSS nên dữ liệu gửi đi sẽ mở trang xác nhận, không tự ghi vào danh sách tĩnh.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- SPLIT INSPECTOR MODALS (:target) -->
+  <section id="work-1" class="modal" aria-label="Chi tiết Vòm Bê Tông Nắng Sớm">
+    <a class="modal-backdrop" href="#gallery" aria-label="Đóng cửa sổ"></a>
+    <div class="modal-card">
+      <a class="modal-close" href="#gallery" aria-label="Đóng">×</a>
+      <div class="modal-media"><img src="assets/arch-01.svg" alt="Vòm Bê Tông Nắng Sớm" /></div>
+      <div class="modal-info">
+        <span class="eyebrow">KIẾN TRÚC · #ARCH-01</span>
+        <h2>Vòm Bê Tông Nắng Sớm</h2>
+        <p class="modal-desc">Ánh nắng xiên lúc 7 giờ sáng tạo mảng tương phản hình học trên kết cấu vòm bê tông trần tại trung tâm Sài Gòn.</p>
+        <dl class="exif-list">
+          <dt>Địa điểm</dt><dd>Quận 1, TP. Hồ Chí Minh</dd>
+          <dt>Thông số</dt><dd>24mm · f/4.0 · ISO 100</dd>
+          <dt>Định dạng</dt><dd>Vector SVG (800 × 600)</dd>
+        </dl>
+        <a class="btn btn-primary" href="assets/arch-01.svg" download="arch-01.svg">↓ Tải bản gốc SVG</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="work-2" class="modal" aria-label="Chi tiết Giao Lộ Chiều Mưa">
+    <a class="modal-backdrop" href="#gallery" aria-label="Đóng cửa sổ"></a>
+    <div class="modal-card">
+      <a class="modal-close" href="#gallery" aria-label="Đóng">×</a>
+      <div class="modal-media"><img src="assets/street-01.svg" alt="Giao Lộ Chiều Mưa" /></div>
+      <div class="modal-info">
+        <span class="eyebrow">ĐƯỜNG PHỐ · #STR-01</span>
+        <h2>Giao Lộ Chiều Mưa</h2>
+        <p class="modal-desc">Mặt đường phản chiếu ánh đèn vàng và sắc xanh trầm mặc sau cơn mưa rào phố cổ.</p>
+        <dl class="exif-list">
+          <dt>Địa điểm</dt><dd>Hoàn Kiếm, Hà Nội</dd>
+          <dt>Thông số</dt><dd>35mm · f/2.0 · ISO 400</dd>
+          <dt>Định dạng</dt><dd>Vector SVG (800 × 600)</dd>
+        </dl>
+        <a class="btn btn-primary" href="assets/street-01.svg" download="street-01.svg">↓ Tải bản gốc SVG</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="work-3" class="modal" aria-label="Chi tiết Mái Ngói Phố Hội">
+    <a class="modal-backdrop" href="#gallery" aria-label="Đóng cửa sổ"></a>
+    <div class="modal-card">
+      <a class="modal-close" href="#gallery" aria-label="Đóng">×</a>
+      <div class="modal-media"><img src="assets/heritage-01.svg" alt="Mái Ngói Phố Hội" /></div>
+      <div class="modal-info">
+        <span class="eyebrow">DI SẢN · #HER-01</span>
+        <h2>Mái Ngói Phố Hội</h2>
+        <p class="modal-desc">Những lớp ngói âm dương xếp tầng dưới nắng chiều vàng ấm đặc trưng của khu phố cổ Hội An.</p>
+        <dl class="exif-list">
+          <dt>Địa điểm</dt><dd>Hội An, Quảng Nam</dd>
+          <dt>Thông số</dt><dd>50mm · f/2.8 · ISO 160</dd>
+          <dt>Định dạng</dt><dd>Vector SVG (800 × 600)</dd>
+        </dl>
+        <a class="btn btn-primary" href="assets/heritage-01.svg" download="heritage-01.svg">↓ Tải bản gốc SVG</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="work-4" class="modal" aria-label="Chi tiết Hải Đăng Mũi Điện">
+    <a class="modal-backdrop" href="#gallery" aria-label="Đóng cửa sổ"></a>
+    <div class="modal-card">
+      <a class="modal-close" href="#gallery" aria-label="Đóng">×</a>
+      <div class="modal-media"><img src="assets/coast-01.svg" alt="Hải Đăng Mũi Điện" /></div>
+      <div class="modal-info">
+        <span class="eyebrow">BIỂN ĐẢO · #COA-01</span>
+        <h2>Hải Đăng Mũi Điện</h2>
+        <p class="modal-desc">Góc rộng hướng ra đường chân trời nơi đón ánh bình minh đầu tiên trên đất liền.</p>
+        <dl class="exif-list">
+          <dt>Địa điểm</dt><dd>Đông Hòa, Phú Yên</dd>
+          <dt>Thông số</dt><dd>16mm · f/8.0 · ISO 100</dd>
+          <dt>Định dạng</dt><dd>Vector SVG (800 × 600)</dd>
+        </dl>
+        <a class="btn btn-primary" href="assets/coast-01.svg" download="coast-01.svg">↓ Tải bản gốc SVG</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="work-5" class="modal" aria-label="Chi tiết Nhịp Cầu Kính Đêm">
+    <a class="modal-backdrop" href="#gallery" aria-label="Đóng cửa sổ"></a>
+    <div class="modal-card">
+      <a class="modal-close" href="#gallery" aria-label="Đóng">×</a>
+      <div class="modal-media"><img src="assets/arch-02.svg" alt="Nhịp Cầu Kính Đêm" /></div>
+      <div class="modal-info">
+        <span class="eyebrow">KIẾN TRÚC · #ARCH-02</span>
+        <h2>Nhịp Cầu Kính Đêm</h2>
+        <p class="modal-desc">Đường dây văng đối xứng và nhịp cầu hiện đại phản chiếu xuống mặt sông lúc chạng vạng.</p>
+        <dl class="exif-list">
+          <dt>Địa điểm</dt><dd>Thủ Thiêm, TP. Hồ Chí Minh</dd>
+          <dt>Thông số</dt><dd>28mm · f/5.6 · ISO 200</dd>
+          <dt>Định dạng</dt><dd>Vector SVG (800 × 600)</dd>
+        </dl>
+        <a class="btn btn-primary" href="assets/arch-02.svg" download="arch-02.svg">↓ Tải bản gốc SVG</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="work-6" class="modal" aria-label="Chi tiết Góc Cà Phê Sáng">
+    <a class="modal-backdrop" href="#gallery" aria-label="Đóng cửa sổ"></a>
+    <div class="modal-card">
+      <a class="modal-close" href="#gallery" aria-label="Đóng">×</a>
+      <div class="modal-media"><img src="assets/street-02.svg" alt="Góc Cà Phê Sáng" /></div>
+      <div class="modal-info">
+        <span class="eyebrow">ĐƯỜNG PHỐ · #STR-02</span>
+        <h2>Góc Cà Phê Sáng</h2>
+        <p class="modal-desc">Khung cửa gỗ nhỏ phủ sương sớm trên con dốc yên tĩnh tại Đà Lạt.</p>
+        <dl class="exif-list">
+          <dt>Địa điểm</dt><dd>Đà Lạt, Lâm Đồng</dd>
+          <dt>Thông số</dt><dd>35mm · f/1.8 · ISO 250</dd>
+          <dt>Định dạng</dt><dd>Vector SVG (800 × 600)</dd>
+        </dl>
+        <a class="btn btn-primary" href="assets/street-02.svg" download="street-02.svg">↓ Tải bản gốc SVG</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="work-7" class="modal" aria-label="Chi tiết Cổng Thành Rêu Phong">
+    <a class="modal-backdrop" href="#gallery" aria-label="Đóng cửa sổ"></a>
+    <div class="modal-card">
+      <a class="modal-close" href="#gallery" aria-label="Đóng">×</a>
+      <div class="modal-media"><img src="assets/heritage-02.svg" alt="Cổng Thành Rêu Phong" /></div>
+      <div class="modal-info">
+        <span class="eyebrow">DI SẢN · #HER-02</span>
+        <h2>Cổng Thành Rêu Phong</h2>
+        <p class="modal-desc">Bức tường gạch cổ phủ rêu xanh trầm mặc sau những mùa mưa cố đô.</p>
+        <dl class="exif-list">
+          <dt>Địa điểm</dt><dd>Kinh Thành Huế</dd>
+          <dt>Thông số</dt><dd>50mm · f/4.0 · ISO 125</dd>
+          <dt>Định dạng</dt><dd>Vector SVG (800 × 600)</dd>
+        </dl>
+        <a class="btn btn-primary" href="assets/heritage-02.svg" download="heritage-02.svg">↓ Tải bản gốc SVG</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="work-8" class="modal" aria-label="Chi tiết Bình Minh Ghềnh Đá">
+    <a class="modal-backdrop" href="#gallery" aria-label="Đóng cửa sổ"></a>
+    <div class="modal-card">
+      <a class="modal-close" href="#gallery" aria-label="Đóng">×</a>
+      <div class="modal-media"><img src="assets/coast-02.svg" alt="Bình Minh Ghềnh Đá" /></div>
+      <div class="modal-info">
+        <span class="eyebrow">BIỂN ĐẢO · #COA-02</span>
+        <h2>Bình Minh Ghềnh Đá</h2>
+        <p class="modal-desc">Vách đá trầm tích núi lửa đón tia nắng vàng đầu ngày bên làn nước trong vắt.</p>
+        <dl class="exif-list">
+          <dt>Địa điểm</dt><dd>Lý Sơn, Quảng Ngãi</dd>
+          <dt>Thông số</dt><dd>24mm · f/11 · ISO 100</dd>
+          <dt>Định dạng</dt><dd>Vector SVG (800 × 600)</dd>
+        </dl>
+        <a class="btn btn-primary" href="assets/coast-02.svg" download="coast-02.svg">↓ Tải bản gốc SVG</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2026 WanderLens — Cá nhân hóa từ PhotoNest (WDLab03)</span>
+      <span>HTML5 &amp; CSS3 Offline Portfolio</span>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="StudyFlow - Ứng dụng quản lý lịch học, deadline và tiến độ học phần cá nhân" />
+  <title>StudyFlow — Quản lý Lịch học & Tiến độ Học phần</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <!-- SIDEBAR ĐIỀU HƯỚNG -->
+    <aside class="sidebar" aria-label="Thanh điều hướng chính">
+      <a class="brand" href="index.html">
+        <span class="brand-logo" aria-hidden="true">SF</span>
+        <span class="brand-text">
+          <strong>StudyFlow</strong>
+          <small>ACADEMIC TRACKER</small>
+        </span>
+      </a>
+
+      <p class="nav-caption">KHÔNG GIAN HỌC TẬP</p>
+      <nav class="main-nav">
+        <a href="#overview" class="nav-link active">Tổng quan tiến độ</a>
+        <a href="#records" class="nav-link">Danh sách học phần (08)</a>
+        <a href="#add-record" class="nav-link">Thêm đầu việc mới</a>
+      </nav>
+
+      <div class="sidebar-card">
+        <span class="status-dot"></span>
+        <div>
+          <strong>Chế độ Offline HTML/CSS</strong>
+          <p>Học kỳ I · Năm học 2026–2027</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- VÙNG NỘI DUNG CHÍNH -->
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <span class="breadcrumb">BẢNG ĐIỀU KHIỂN CÁ NHÂN</span>
+          <h1>Theo dõi Deadline & Tiến độ Học phần</h1>
+        </div>
+        <a href="#add-record" class="btn btn-primary">+ Tạo đầu việc</a>
+      </header>
+
+      <!-- KHU TỔNG QUAN (CHỤP HÌNH S4) -->
+      <section id="overview" class="stats-grid" aria-label="Thống kê tổng quan">
+        <article class="stat-card">
+          <span class="stat-label">Tổng đầu việc quản lý</span>
+          <strong class="stat-value">08</strong>
+          <span class="stat-sub">Trải đều 03 nhóm học phần</span>
+        </article>
+        <article class="stat-card accent-teal">
+          <span class="stat-label">Đã hoàn thành (100%)</span>
+          <strong class="stat-value">03</strong>
+          <span class="stat-sub">SF-03, SF-04, SF-08</span>
+        </article>
+        <article class="stat-card accent-amber">
+          <span class="stat-label">Đang thực hiện</span>
+          <strong class="stat-value">03</strong>
+          <span class="stat-sub">Tiến độ trung bình 65%</span>
+        </article>
+        <article class="stat-card accent-rose">
+          <span class="stat-label">Sắp đến hạn / Chưa làm</span>
+          <strong class="stat-value">02</strong>
+          <span class="stat-sub">Ưu tiên xử lý tuần tới</span>
+        </article>
+      </section>
+
+      <!-- KHU DANH SÁCH & BỘ LỌC CSS-ONLY (CHỤP HÌNH S5) -->
+      <section id="records" class="records-section" aria-labelledby="records-title">
+        <div class="section-head">
+          <div>
+            <h2 id="records-title">Danh sách Đầu việc & Tiến độ (08 bản ghi)</h2>
+            <p>Lọc nhanh theo nhóm học phần bằng bộ chọn CSS thuần túy hoặc bấm vào từng thẻ để xem chi tiết.</p>
+          </div>
+        </div>
+
+        <!-- RADIO INPUT ẨN ĐIỀU KHIỂN BỘ LỌC -->
+        <input type="radio" name="group-filter" id="filter-all" class="sr-only" checked />
+        <input type="radio" name="group-filter" id="filter-web" class="sr-only" />
+        <input type="radio" name="group-filter" id="filter-net" class="sr-only" />
+        <input type="radio" name="group-filter" id="filter-math" class="sr-only" />
+
+        <div class="filter-bar" role="group" aria-label="Bộ lọc nhóm học phần">
+          <label for="filter-all" class="filter-pill">Tất cả (08)</label>
+          <label for="filter-web" class="filter-pill">Lập trình & Web (03)</label>
+          <label for="filter-net" class="filter-pill">Mạng & Hệ thống (03)</label>
+          <label for="filter-math" class="filter-pill">Toán & Giải thuật (02)</label>
+        </div>
+
+        <div class="records-grid">
+          <!-- RECORD 01 -->
+          <article class="record-card" data-group="lap-trinh-web">
+            <div class="card-top">
+              <span class="code-tag">SF-01</span>
+              <span class="group-badge badge-web">Lập trình & Web</span>
+            </div>
+            <h3>Hoàn thiện Báo cáo WD-Lab03 (HTML & CSS Apps)</h3>
+            <p class="card-meta">Hạn nộp: <strong>28/11/2026</strong> · Ưu tiên Cao</p>
+            <div class="progress-wrap">
+              <div class="progress-info"><span>Đang thực hiện</span><span>85%</span></div>
+              <div class="progress-bar"><span style="width: 85%"></span></div>
+            </div>
+            <a href="#detail-sf01" class="btn-detail">Xem chi tiết bản ghi ↗</a>
+          </article>
+
+          <!-- RECORD 02 -->
+          <article class="record-card" data-group="lap-trinh-web">
+            <div class="card-top">
+              <span class="code-tag">SF-02</span>
+              <span class="group-badge badge-web">Lập trình & Web</span>
+            </div>
+            <h3>Tối ưu Responsive Mobile 390px & CSS Grid</h3>
+            <p class="card-meta">Hạn nộp: <strong>30/11/2026</strong> · Ưu tiên Trung bình</p>
+            <div class="progress-wrap">
+              <div class="progress-info"><span>Đang thực hiện</span><span>60%</span></div>
+              <div class="progress-bar"><span style="width: 60%"></span></div>
+            </div>
+            <a href="#detail-sf02" class="btn-detail">Xem chi tiết bản ghi ↗</a>
+          </article>
+
+          <!-- RECORD 03 -->
+          <article class="record-card" data-group="lap-trinh-web">
+            <div class="card-top">
+              <span class="code-tag">SF-03</span>
+              <span class="group-badge badge-web">Lập trình & Web</span>
+            </div>
+            <h3>Đẩy mã nguồn & Commit History lên GitHub</h3>
+            <p class="card-meta">Hạn nộp: <strong>27/11/2026</strong> · Ưu tiên Cao</p>
+            <div class="progress-wrap">
+              <div class="progress-info"><span>Hoàn thành</span><span>100%</span></div>
+              <div class="progress-bar done"><span style="width: 100%"></span></div>
+            </div>
+            <a href="#detail-sf03" class="btn-detail">Xem chi tiết bản ghi ↗</a>
+          </article>
+
+          <!-- RECORD 04 -->
+          <article class="record-card" data-group="mang-he-thong">
+            <div class="card-top">
+              <span class="code-tag">SF-04</span>
+              <span class="group-badge badge-net">Mạng & Hệ thống</span>
+            </div>
+            <h3>Cấu hình Định tuyến OSPF Area 0 Đa vùng (NDLab02)</h3>
+            <p class="card-meta">Hạn nộp: <strong>02/12/2026</strong> · Ưu tiên Cao</p>
+            <div class="progress-wrap">
+              <div class="progress-info"><span>Hoàn thành</span><span>100%</span></div>
+              <div class="progress-bar done"><span style="width: 100%"></span></div>
+            </div>
+            <a href="#detail-sf04" class="btn-detail">Xem chi tiết bản ghi ↗</a>
+          </article>
+
+          <!-- RECORD 05 -->
+          <article class="record-card" data-group="mang-he-thong">
+            <div class="card-top">
+              <span class="code-tag">SF-05</span>
+              <span class="group-badge badge-net">Mạng & Hệ thống</span>
+            </div>
+            <h3>Kiểm thử Chuyển tuyến Dự phòng WAN & Traceroute</h3>
+            <p class="card-meta">Hạn nộp: <strong>05/12/2026</strong> · Ưu tiên Trung bình</p>
+            <div class="progress-wrap">
+              <div class="progress-info"><span>Sắp đến hạn</span><span>40%</span></div>
+              <div class="progress-bar warn"><span style="width: 40%"></span></div>
+            </div>
+            <a href="#detail-sf05" class="btn-detail">Xem chi tiết bản ghi ↗</a>
+          </article>
+
+          <!-- RECORD 06 -->
+          <article class="record-card" data-group="mang-he-thong">
+            <div class="card-top">
+              <span class="code-tag">SF-06</span>
+              <span class="group-badge badge-net">Mạng & Hệ thống</span>
+            </div>
+            <h3>Phân tích Gói tin ICMP & ARP trong Simulation Mode</h3>
+            <p class="card-meta">Hạn nộp: <strong>08/12/2026</strong> · Ưu tiên Thấp</p>
+            <div class="progress-wrap">
+              <div class="progress-info"><span>Chưa bắt đầu</span><span>15%</span></div>
+              <div class="progress-bar"><span style="width: 15%"></span></div>
+            </div>
+            <a href="#detail-sf06" class="btn-detail">Xem chi tiết bản ghi ↗</a>
+          </article>
+
+          <!-- RECORD 07 -->
+          <article class="record-card" data-group="toan-giai-thuat">
+            <div class="card-top">
+              <span class="code-tag">SF-07</span>
+              <span class="group-badge badge-math">Toán & Giải thuật</span>
+            </div>
+            <h3>Ôn tập Đệ quy, Quy hoạch động & Độ phức tạp</h3>
+            <p class="card-meta">Hạn nộp: <strong>10/12/2026</strong> · Ưu tiên Cao</p>
+            <div class="progress-wrap">
+              <div class="progress-info"><span>Đang thực hiện</span><span>50%</span></div>
+              <div class="progress-bar"><span style="width: 50%"></span></div>
+            </div>
+            <a href="#detail-sf07" class="btn-detail">Xem chi tiết bản ghi ↗</a>
+          </article>
+
+          <!-- RECORD 08 -->
+          <article class="record-card" data-group="toan-giai-thuat">
+            <div class="card-top">
+              <span class="code-tag">SF-08</span>
+              <span class="group-badge badge-math">Toán & Giải thuật</span>
+            </div>
+            <h3>Giải bài tập Tọa độ Vectơ & Ứng dụng Tối ưu hóa</h3>
+            <p class="card-meta">Hạn nộp: <strong>12/12/2026</strong> · Ưu tiên Trung bình</p>
+            <div class="progress-wrap">
+              <div class="progress-info"><span>Hoàn thành</span><span>100%</span></div>
+              <div class="progress-bar done"><span style="width: 100%"></span></div>
+            </div>
+            <a href="#detail-sf08" class="btn-detail">Xem chi tiết bản ghi ↗</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- BIỂU MẪU THÊM ĐẦU VIỆC (CHỤP HÌNH S6) -->
+      <section id="add-record" class="form-section" aria-labelledby="form-title">
+        <div class="section-head">
+          <div>
+            <h2 id="form-title">Thêm Đầu việc Học tập Mới</h2>
+            <p>Biểu mẫu kiểm tra hợp lệ bằng HTML5 Validation và điều hướng sang trang xác nhận tĩnh.</p>
+          </div>
+        </div>
+
+        <form action="form-result.html" method="get" class="study-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="task-code">Mã đầu việc *</label>
+              <input id="task-code" name="task_code" type="text" placeholder="Ví dụ: SF-09" minlength="4" maxlength="12" required />
+            </div>
+
+            <div class="form-group">
+              <label for="task-group">Nhóm học phần *</label>
+              <select id="task-group" name="task_group" required>
+                <option value="">-- Chọn nhóm học phần --</option>
+                <option value="lap-trinh-web">Lập trình & Web</option>
+                <option value="mang-he-thong">Mạng & Hệ thống</option>
+                <option value="toan-giai-thuat">Toán & Giải thuật</option>
+              </select>
+            </div>
+
+            <div class="form-group full-span">
+              <label for="task-name">Tên đầu việc / Bài thực hành *</label>
+              <input id="task-name" name="task_name" type="text" placeholder="Nhập tên bài thực hành hoặc chuyên đề..." minlength="5" required />
+            </div>
+
+            <div class="form-group">
+              <label for="task-deadline">Hạn hoàn thành *</label>
+              <input id="task-deadline" name="task_deadline" type="date" required />
+            </div>
+
+            <div class="form-group">
+              <label for="task-priority">Mức độ ưu tiên *</label>
+              <select id="task-priority" name="task_priority" required>
+                <option value="cao">Ưu tiên Cao</option>
+                <option value="trung-binh">Ưu tiên Trung bình</option>
+                <option value="thap">Ưu tiên Thấp</option>
+              </select>
+            </div>
+
+            <div class="form-group full-span">
+              <label for="task-note">Ghi chú & Tài liệu đính kèm</label>
+              <textarea id="task-note" name="task_note" rows="3" placeholder="Ghi chú nội dung cần chuẩn bị..."></textarea>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="reset" class="btn btn-ghost">Xóa nhập lại</button>
+            <button type="submit" class="btn btn-primary">Ghi nhận đầu việc ↗</button>
+          </div>
+        </form>
+      </section>
+
+      <footer class="site-footer">
+        <p>© 2026 StudyFlow — Ứng dụng quản lý tự thiết kế (WD-Lab03 · HTML5 & CSS3 Offline)</p>
+      </footer>
+    </main>
+  </div>
+
+  <!-- CÁC CỬA SỔ CHI TIẾT BẢN GHI BẰNG :TARGET -->
+  <section class="modal" id="detail-sf01" aria-label="Chi tiết SF-01">
+    <a class="modal-backdrop" href="#records" aria-label="Đóng"></a>
+    <div class="modal-box">
+      <a class="modal-close" href="#records" title="Đóng">×</a>
+      <span class="group-badge badge-web">SF-01 · Lập trình & Web</span>
+      <h2>Hoàn thiện Báo cáo WD-Lab03 (HTML & CSS Apps)</h2>
+      <p><strong>Hạn hoàn thành:</strong> 28/11/2026 | <strong>Tiến độ:</strong> 85%</p>
+      <p><strong>Nội dung chi tiết:</strong> Hoàn tất đối chiếu Before/After ứng dụng WanderLens, xây dựng ứng dụng mới StudyFlow, giải thích 12 trích đoạn code và xuất file PDF đúng quy cách.</p>
+      <a href="#records" class="btn btn-primary">Đóng cửa sổ</a>
+    </div>
+  </section>
+
+  <section class="modal" id="detail-sf02" aria-label="Chi tiết SF-02">
+    <a class="modal-backdrop" href="#records" aria-label="Đóng"></a>
+    <div class="modal-box">
+      <a class="modal-close" href="#records" title="Đóng">×</a>
+      <span class="group-badge badge-web">SF-02 · Lập trình & Web</span>
+      <h2>Tối ưu Responsive Mobile 390px & CSS Grid</h2>
+      <p><strong>Hạn hoàn thành:</strong> 30/11/2026 | <strong>Tiến độ:</strong> 60%</p>
+      <p><strong>Nội dung chi tiết:</strong> Kiểm thử breakpoint 1024px, 768px và 390px trên Chrome DevTools, đảm bảo lưới card tự co giãn 1 cột trên điện thoại và không tràn ngang.</p>
+      <a href="#records" class="btn btn-primary">Đóng cửa sổ</a>
+    </div>
+  </section>
+
+  <section class="modal" id="detail-sf03" aria-label="Chi tiết SF-03">
+    <a class="modal-backdrop" href="#records" aria-label="Đóng"></a>
+    <div class="modal-box">
+      <a class="modal-close" href="#records" title="Đóng">×</a>
+      <span class="group-badge badge-web">SF-03 · Lập trình & Web</span>
+      <h2>Đẩy mã nguồn & Commit History lên GitHub</h2>
+      <p><strong>Hạn hoàn thành:</strong> 27/11/2026 | <strong>Tiến độ:</strong> 100% (Hoàn thành)</p>
+      <p><strong>Nội dung chi tiết:</strong> Tổ chức 02 thư mục dự án độc lập, viết README.md và thực hiện commit theo từng giai đoạn lên nhánh main.</p>
+      <a href="#records" class="btn btn-primary">Đóng cửa sổ</a>
+    </div>
+  </section>
+
+  <section class="modal" id="detail-sf04" aria-label="Chi tiết SF-04">
+    <a class="modal-backdrop" href="#records" aria-label="Đóng"></a>
+    <div class="modal-box">
+      <a class="modal-close" href="#records" title="Đóng">×</a>
+      <span class="group-badge badge-net">SF-04 · Mạng & Hệ thống</span>
+      <h2>Cấu hình Định tuyến OSPF Area 0 Đa vùng (NDLab02)</h2>
+      <p><strong>Hạn hoàn thành:</strong> 02/12/2026 | <strong>Tiến độ:</strong> 100% (Hoàn thành)</p>
+      <p><strong>Nội dung chi tiết:</strong> Triển khai mô hình 4 Router (R1–R4), 4 Switch, 10 PC, gán IP subnet /24, cấu hình clock rate đầu DCE và kích hoạt OSPF process 1 Area 0.</p>
+      <a href="#records" class="btn btn-primary">Đóng cửa sổ</a>
+    </div>
+  </section>
+
+  <section class="modal" id="detail-sf05" aria-label="Chi tiết SF-05">
+    <a class="modal-backdrop" href="#records" aria-label="Đóng"></a>
+    <div class="modal-box">
+      <a class="modal-close" href="#records" title="Đóng">×</a>
+      <span class="group-badge badge-net">SF-05 · Mạng & Hệ thống</span>
+      <h2>Kiểm thử Chuyển tuyến Dự phòng WAN & Traceroute</h2>
+      <p><strong>Hạn hoàn thành:</strong> 05/12/2026 | <strong>Tiến độ:</strong> 40% (Sắp đến hạn)</p>
+      <p><strong>Nội dung chi tiết:</strong> Ngắt liên kết Serial chính giữa R1–R3, đo thời gian hội tụ OSPF và đối chiếu bảng định tuyến trước/sau failover bằng lệnh tracert.</p>
+      <a href="#records" class="btn btn-primary">Đóng cửa sổ</a>
+    </div>
+  </section>
+
+  <section class="modal" id="detail-sf06" aria-label="Chi tiết SF-06">
+    <a class="modal-backdrop" href="#records" aria-label="Đóng"></a>
+    <div class="modal-box">
+      <a class="modal-close" href="#records" title="Đóng">×</a>
+      <span class="group-badge badge-net">SF-06 · Mạng & Hệ thống</span>
+      <h2>Phân tích Gói tin ICMP & ARP trong Simulation Mode</h2>
+      <p><strong>Hạn hoàn thành:</strong> 08/12/2026 | <strong>Tiến độ:</strong> 15% (Chưa bắt đầu)</p>
+      <p><strong>Nội dung chi tiết:</strong> Chụp PDU Details qua các chặng nhảy từ PC0 đến PC9 để phân tích sự thay đổi địa chỉ MAC nguồn/đích và chỉ số TTL.</p>
+      <a href="#records" class="btn btn-primary">Đóng cửa sổ</a>
+    </div>
+  </section>
+
+  <section class="modal" id="detail-sf07" aria-label="Chi tiết SF-07">
+    <a class="modal-backdrop" href="#records" aria-label="Đóng"></a>
+    <div class="modal-box">
+      <a class="modal-close" href="#records" title="Đóng">×</a>
+      <span class="group-badge badge-math">SF-07 · Toán & Giải thuật</span>
+      <h2>Ôn tập Đệ quy, Quy hoạch động & Độ phức tạp</h2>
+      <p><strong>Hạn hoàn thành:</strong> 10/12/2026 | <strong>Tiến độ:</strong> 50% (Đang thực hiện)</p>
+      <p><strong>Nội dung chi tiết:</strong> Hệ thống hóa công thức truy hồi, đánh giá độ phức tạp Big-O và luyện tập 15 bài toán tối ưu hóa kinh điển.</p>
+      <a href="#records" class="btn btn-primary">Đóng cửa sổ</a>
+    </div>
+  </section>
+
+  <section class="modal" id="detail-sf08" aria-label="Chi tiết SF-08">
+    <a class="modal-backdrop" href="#records" aria-label="Đóng"></a>
+    <div class="modal-box">
+      <a class="modal-close" href="#records" title="Đóng">×</a>
+      <span class="group-badge badge-math">SF-08 · Toán & Giải thuật</span>
+      <h2>Giải bài tập Tọa độ Vectơ & Ứng dụng Tối ưu hóa</h2>
+      <p><strong>Hạn hoàn thành:</strong> 12/12/2026 | <strong>Tiến độ:</strong> 100% (Hoàn thành)</p>
+      <p><strong>Nội dung chi tiết:</strong> Hoàn thiện bộ lời giải chi tiết các bài toán tọa độ Oxy/Oxyz và bài toán cực trị ứng dụng thực tế.</p>
+      <a href="#records" class="btn btn-primary">Đóng cửa sổ</a>
+    </div>
+  </section>
+</body>
+</html>
